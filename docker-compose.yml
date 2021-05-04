@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  nuxt:
+    build: .
+    container_name: d2
+    restart: always
+    networks: 
+      - pn 
+    ports:
+      - 3000:3000
+    command: 
+      "npm run start"
+networks:
+  pn:
+    external: 
+      name: private-network
