@@ -6,7 +6,9 @@ services:
     container_name: d2
     restart: always
     networks: 
-      - pn 
+      - pn
+    environment:
+      NODE_ENV: production   
     ports:
       - 3000:3000
     command: 
